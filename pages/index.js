@@ -26,9 +26,7 @@ function Main(props) {
           <Grid container>
             <Grid item md={12}>
               <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid item sm={6} sx={{ flexGrow: 1 }}>
-
-                </Grid>
+                <Grid item sm={6} sx={{ flexGrow: 1 }}></Grid>
                 <Grid item md={6} sx={{ flexGrow: 1 }}>
                   <Drawer />
                 </Grid>
@@ -49,7 +47,7 @@ function Main(props) {
         </Paper>
         <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ py: 2 }}>
           <Paper component="form" sx={{ border: '1px solid #eda803', p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}>
-            <InputBase sx={{ ml: 1, flex: 1, input: { color: '#c4cad6' }, label: { color: 'blue' } }} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search google maps' }} />
+            <InputBase sx={{ ml: 1, flex: 1, input: { color: '#c4cad6' } }} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search' }} />
             <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
             <IconButton sx={{ p: '10px', color: '#c4cad6' }} aria-label="Search stamp, creator, TX, CPID">
               <SearchIcon color="#c4cad6" />
@@ -62,7 +60,7 @@ function Main(props) {
               {stamps.map((item) => (
                 <ImageListItem onClick={() => { }} key={item.img} sx={{ m: { xs: 0, md: 2 } }}>
                   <img style={{ minHeight: 240, maxHeight: 308 }} src={`${item.img}?w=248&fit=crop&auto=format`} srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`} alt={item.title} loading="lazy" />
-                  <ImageListItemBar sx={{ "& .MuiImageListItemBar-subtitle": (theme) => theme.typography.stampSubTitle, "& .MuiImageListItemBar-title": (theme) => theme.typography.stampTitle, background: 'rgba(0,0,0,0.86)' }} title={'Stamp:'} subtitle={'Author:'} />
+                  <ImageListItemBar sx={{ "& .MuiImageListItemBar-subtitle": (theme) => theme.typography.stampSubTitle, "& .MuiImageListItemBar-title": (theme) => theme.typography.stampTitle, background: 'rgba(0,0,0,0.86)' }} title={`Stamp: ${item.title}`} subtitle={`Creator: ${item.Author}`} />
                 </ImageListItem>
               ))}
             </ImageList>
@@ -73,21 +71,21 @@ function Main(props) {
   );
 }
 const stamps = [
-  { link: '/tcardomomo', img: '/st1.png', title: 'CARDOMOMO', Species: 'Elattaria Cardomumum' },
-  { link: '/dienteleon', img: '/st2.png', title: 'DIENTE DE LEON', Species: 'Taraxacum Officinale' },
-  { link: '/damiana', img: '/st3.jpg', title: 'DAMIANA', Species: 'Turnera Diffusa' },
-  { link: '/coladecaballo', img: '/st4.webp', title: 'COLA DE CABALLO', Species: 'Equisetum Arvense' },
-  { link: '/chilcuague', img: '/st5.png', title: 'CHILCUAGUE', Species: 'Heliopsis Longipes' },
-  { link: '/canela', img: '/st6.jpg', title: 'CANELA', Species: 'Cinnamumum Ceylanicum' },
-  { link: '/albahaca', img: '/st7.jpg', title: 'ALBAHACA', Species: 'Ocimun Basilicum' },
-  { link: '/tcacao', img: '/st8.webp', title: 'CACAO', Species: 'Theobroma Cacao', },
-  { link: '/jamaica', img: '/st9.png', title: 'JAMAICA', Species: 'Hibiscus Sabdariffa' },
-  { link: '/cuachalalate', img: '/st10.png', title: 'CUACHALALATE', Species: 'Amphipterygium Adstringens' },
-  { link: '/reishi', img: '/st11.jpg', title: 'HONGO REISHI', Species: 'Ganoderma Lucidum' },
-  { link: '/gengibre', img: '/st12.png', title: 'GENGIBRE', Species: 'Zingiber Officinale' },
-  { link: '/chilchahua', img: '/st4.webp', title: 'CHILCHAHUA', Species: 'Tagetes Nelsonii Greenm' },
-  { link: '/cafeverde', img: '/st2.png', title: 'CAFE VERDE', Species: 'Coffea Arabica' },
-  { link: '/hinojo', img: '/st3.jpg', title: 'HINOJO', Species: 'Foeniculum Vulgare', },
-  { link: '/cempasuchil', img: '/st7.jpg', title: 'CEMPASUCHIL', Species: 'Tagetes Erecta L' }
+  { link: '/a', img: '/st1.png', title: '0001', Author: '0x38...t433' },
+  { link: '/a', img: '/st2.png', title: '0002', Author: '0x38...t433' },
+  { link: '/a', img: '/st3.jpg', title: '0003', Author: '0x38...t433' },
+  { link: '/a', img: '/st4.webp', title: '0004', Author: '0x38...t433' },
+  { link: '/a', img: '/st5.png', title: '0005', Author: '0x38...t433' },
+  { link: '/a', img: '/st6.jpg', title: '0006', Author: '0x38...t433' },
+  { link: '/a', img: '/st7.jpg', title: '0007', Author: '0x38...t433' },
+  { link: '/a', img: '/st8.webp', title: '0008', Author: '0x38...t433', },
+  { link: '/a', img: '/st9.png', title: '00010', Author: '0x38...t433' },
+  { link: '/a', img: '/st10.png', title: '00011', Author: '0x38...t433' },
+  { link: '/a', img: '/st11.jpg', title: '00012', Author: '0x38...t433' },
+  { link: '/a', img: '/st12.png', title: '00013', Author: '0x38...t433' },
+  { link: '/a', img: '/st4.webp', title: '00014', Author: '0x38...t433' },
+  { link: '/a', img: '/st2.png', title: '00015', Author: '0x38...t433' },
+  { link: '/a', img: '/st3.jpg', title: '00016', Author: '0x38...t433', },
+  { link: '/a', img: '/st7.jpg', title: '00017', Author: '0x38...t433' }
 ];
 export default Main;
