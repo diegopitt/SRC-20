@@ -48,7 +48,7 @@ function Main(props) {
             <ImageList variant="standard" cols={matches ? 3 : 2} gap={26}>
               {stamps.map((item) => (
                 <ImageListItem onClick={() => {  }} key={item.img} sx={{ m: { xs: 0, md: 2 } }}>
-                  <img style={{ minHeight: 240, maxHeight: 308 }} src={`cardo.jpg?w=248&fit=crop&auto=format`} srcSet={`cardo.jpg?w=248&fit=crop&auto=format&dpr=2 2x`} alt={item.title} loading="lazy" />
+                  <img style={{ minHeight: 240, maxHeight: 308 }} src={`${item.img}?w=248&fit=crop&auto=format`} srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`} alt={item.title} loading="lazy" />
                   <ImageListItemBar sx={{ "& .MuiImageListItemBar-subtitle": (theme) => theme.typography.stampSubTitle, "& .MuiImageListItemBar-title": (theme) => theme.typography.stampTitle, background: 'rgba(0,0,0,0.86)' }} title={'Stamp:'} subtitle={'Author:'} />
                 </ImageListItem>
               ))}
