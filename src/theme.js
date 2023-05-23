@@ -37,14 +37,14 @@ const theme = createTheme({
     MuiDivider: {
       styleOverrides: {
         root: {
-          background:'#e0cbb8'
+          background:'#eda803'
         }
       }
     },
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: '#eda803'
+          backgroundColor: '#132028'
         }
       }
     },
