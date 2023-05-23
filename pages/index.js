@@ -60,21 +60,21 @@ function Main(props) {
   );
 }
 const stamps = [
-  { link: '/tcardomomo', img: '/cardo.jpg', title: 'CARDOMOMO', Species: 'Elattaria Cardomumum' },
-  { link: '/dienteleon', img: '/diente.jpg', title: 'DIENTE DE LEON', Species: 'Taraxacum Officinale'},
-  { link: '/damiana', img: '/damiana.jpg', title: 'DAMIANA', Species: 'Turnera Diffusa'},
-  { link: '/coladecaballo', img: '/cola.jpg', title: 'COLA DE CABALLO', Species: 'Equisetum Arvense'},
-  { link: '/chilcuague', img: '/chilcuague.jpg', title: 'CHILCUAGUE', Species: 'Heliopsis Longipes'},
-  { link: '/canela', img: '/canela.jpg', title: 'CANELA', Species: 'Cinnamumum Ceylanicum' },
-  { link: '/albahaca', img: '/albahaca.jpg', title: 'ALBAHACA', Species: 'Ocimun Basilicum' },
-  { link: '/tcacao', img: '/cacao.jpg', title: 'CACAO', Species: 'Theobroma Cacao', },
-  { link: '/jamaica', img: '/jamaica.jpg', title: 'JAMAICA', Species: 'Hibiscus Sabdariffa' },
-  { link: '/cuachalalate', img: '/cuacha.jpg', title: 'CUACHALALATE', Species: 'Amphipterygium Adstringens'},
-  { link: '/reishi', img: '/reishi2.jpg', title: 'HONGO REISHI', Species: 'Ganoderma Lucidum' },
-  { link: '/gengibre', img: '/gengi.jpg', title: 'GENGIBRE', Species: 'Zingiber Officinale'},
-  { link: '/chilchahua', img: '/chil.jpg', title: 'CHILCHAHUA', Species: 'Tagetes Nelsonii Greenm'},
-  { link: '/cafeverde', img: '/arabica.jpg', title: 'CAFE VERDE', Species: 'Coffea Arabica'},
-  { link: '/hinojo', img: '/hinojo.jpg', title: 'HINOJO', Species: 'Foeniculum Vulgare', },
-  { link: '/cempasuchil', img: '/tage2.jpg', title: 'CEMPASUCHIL', Species: 'Tagetes Erecta L' }
+  { link: '/tcardomomo', img: '/st1.png', title: 'CARDOMOMO', Species: 'Elattaria Cardomumum' },
+  { link: '/dienteleon', img: '/st2.png', title: 'DIENTE DE LEON', Species: 'Taraxacum Officinale'},
+  { link: '/damiana', img: '/st3.jpg', title: 'DAMIANA', Species: 'Turnera Diffusa'},
+  { link: '/coladecaballo', img: '/st4.jpg', title: 'COLA DE CABALLO', Species: 'Equisetum Arvense'},
+  { link: '/chilcuague', img: '/st5.jpg', title: 'CHILCUAGUE', Species: 'Heliopsis Longipes'},
+  { link: '/canela', img: '/st6.jpg', title: 'CANELA', Species: 'Cinnamumum Ceylanicum' },
+  { link: '/albahaca', img: '/st7.jpg', title: 'ALBAHACA', Species: 'Ocimun Basilicum' },
+  { link: '/tcacao', img: '/st8.webp', title: 'CACAO', Species: 'Theobroma Cacao', },
+  { link: '/jamaica', img: '/st9.jpg', title: 'JAMAICA', Species: 'Hibiscus Sabdariffa' },
+  { link: '/cuachalalate', img: '/st10.png', title: 'CUACHALALATE', Species: 'Amphipterygium Adstringens'},
+  { link: '/reishi', img: '/st11.webp', title: 'HONGO REISHI', Species: 'Ganoderma Lucidum' },
+  { link: '/gengibre', img: '/st12.png', title: 'GENGIBRE', Species: 'Zingiber Officinale'},
+  { link: '/chilchahua', img: '/st4.webp', title: 'CHILCHAHUA', Species: 'Tagetes Nelsonii Greenm'},
+  { link: '/cafeverde', img: '/st2.png', title: 'CAFE VERDE', Species: 'Coffea Arabica'},
+  { link: '/hinojo', img: '/st3.jpg', title: 'HINOJO', Species: 'Foeniculum Vulgare', },
+  { link: '/cempasuchil', img: '/st7.jpg', title: 'CEMPASUCHIL', Species: 'Tagetes Erecta L' }
 ];
 export default Main;
