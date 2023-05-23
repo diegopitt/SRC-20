@@ -14,8 +14,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/router'
 import { useMediaQuery } from '@mui/material';
 
-function Main(props) {
-  const { data } = props;
+function Main(stamps) {
+  const { data } = stamps;
   console.log(data)
   const matches = useMediaQuery('(min-width:796px)');
   const router = useRouter();
@@ -71,29 +71,12 @@ function Main(props) {
     </div>
   );
 }
-const stamps = [
-  { key: '1', link: '/a', img: '/st1.png', title: '0001', Author: '0x38...t433' },
-  { key: '2', link: '/a', img: '/st2.png', title: '0002', Author: '0x38...t433' },
-  { key: '3', link: '/a', img: '/st3.jpg', title: '0003', Author: '0x38...t433' },
-  { key: '4', link: '/a', img: '/st4.webp', title: '0004', Author: '0x38...t433' },
-  { key: '5', link: '/a', img: '/st5.png', title: '0005', Author: '0x38...t433' },
-  { key: '6', link: '/a', img: '/st6.jpg', title: '0006', Author: '0x38...t433' },
-  { key: '7', link: '/a', img: '/st7.jpg', title: '0007', Author: '0x38...t433' },
-  { key: '8', link: '/a', img: '/st8.webp', title: '0008', Author: '0x38...t433', },
-  { key: '9', link: '/a', img: '/st9.png', title: '00010', Author: '0x38...t433' },
-  { key: '10', link: '/a', img: '/st10.png', title: '00011', Author: '0x38...t433' },
-  { lkey: '11', ink: '/a', img: '/st11.jpg', title: '00012', Author: '0x38...t433' },
-  { key: '12', link: '/a', img: '/st12.png', title: '00013', Author: '0x38...t433' },
-  { key: '14', link: '/a', img: '/st4.webp', title: '00014', Author: '0x38...t433' },
-  { key: '13', link: '/a', img: '/st2.png', title: '00015', Author: '0x38...t433' },
-  { key: '15', link: '/a', img: '/st3.jpg', title: '00016', Author: '0x38...t433', },
-  { key: '16', link: '/a', img: '/st7.jpg', title: '00017', Author: '0x38...t433' }
-];
+
 export async function getStaticProps() {
-  const res = await fetch('https://stampchain.io/api/stamps?page=1&page_size=1000')
+  const res = await fetch('https://stampchain.io/api/stamps?page=1&page_size=100')
   const data = await res.json()
   return {
-    props: { data },
+    props: { stamps },
   }
 }
 export default Main;
