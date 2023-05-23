@@ -15,7 +15,8 @@ import { useRouter } from 'next/router'
 import { useMediaQuery } from '@mui/material';
 
 function Main(props) {
-  const { } = props;
+  const { data } = props;
+  console.log(data)
   const matches = useMediaQuery('(min-width:796px)');
   const router = useRouter();
   return (
@@ -57,10 +58,10 @@ function Main(props) {
         <Grid container direction="row" justifyContent="center" alignItems="center">
           <Grid item xs={12} sm={10} sx={{ pb: 4 }}>
             <ImageList variant="standard" cols={matches ? 3 : 2} gap={26}>
-              {stamps.map((item) => (
-                <ImageListItem onClick={() => { }} key={item.img} sx={{ m: { xs: 0, md: 2 } }}>
-                  <img style={{ minHeight: 240, maxHeight: 308 }} src={`${item.img}?w=248&fit=crop&auto=format`} srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`} alt={item.title} loading="lazy" />
-                  <ImageListItemBar sx={{ "& .MuiImageListItemBar-subtitle": (theme) => theme.typography.stampSubTitle, "& .MuiImageListItemBar-title": (theme) => theme.typography.stampTitle, background: 'rgba(0,0,0,0.86)' }} title={`Stamp: ${item.title}`} subtitle={`Creator: ${item.Author}`} />
+              {data.map((item) => (
+                <ImageListItem onClick={() => { }} key={item.stamp} sx={{ m: { xs: 0, md: 2 } }}>
+                  <img style={{ minHeight: 240, maxHeight: 308 }} src={`${item.stamp_url}`} srcSet={`${item.stamp_url}`} alt={item.title} loading="lazy" />
+                  <ImageListItemBar sx={{ "& .MuiImageListItemBar-subtitle": (theme) => theme.typography.stampSubTitle, "& .MuiImageListItemBar-title": (theme) => theme.typography.stampTitle, background: 'rgba(0,0,0,0.86)' }} title={`Stamp: ${item.stamp}`} subtitle={`Creator: ${item.creator}`} />
                 </ImageListItem>
               ))}
             </ImageList>
@@ -71,21 +72,28 @@ function Main(props) {
   );
 }
 const stamps = [
-  { link: '/a', img: '/st1.png', title: '0001', Author: '0x38...t433' },
-  { link: '/a', img: '/st2.png', title: '0002', Author: '0x38...t433' },
-  { link: '/a', img: '/st3.jpg', title: '0003', Author: '0x38...t433' },
-  { link: '/a', img: '/st4.webp', title: '0004', Author: '0x38...t433' },
-  { link: '/a', img: '/st5.png', title: '0005', Author: '0x38...t433' },
-  { link: '/a', img: '/st6.jpg', title: '0006', Author: '0x38...t433' },
-  { link: '/a', img: '/st7.jpg', title: '0007', Author: '0x38...t433' },
-  { link: '/a', img: '/st8.webp', title: '0008', Author: '0x38...t433', },
-  { link: '/a', img: '/st9.png', title: '00010', Author: '0x38...t433' },
-  { link: '/a', img: '/st10.png', title: '00011', Author: '0x38...t433' },
-  { link: '/a', img: '/st11.jpg', title: '00012', Author: '0x38...t433' },
-  { link: '/a', img: '/st12.png', title: '00013', Author: '0x38...t433' },
-  { link: '/a', img: '/st4.webp', title: '00014', Author: '0x38...t433' },
-  { link: '/a', img: '/st2.png', title: '00015', Author: '0x38...t433' },
-  { link: '/a', img: '/st3.jpg', title: '00016', Author: '0x38...t433', },
-  { link: '/a', img: '/st7.jpg', title: '00017', Author: '0x38...t433' }
+  { key: '1', link: '/a', img: '/st1.png', title: '0001', Author: '0x38...t433' },
+  { key: '2', link: '/a', img: '/st2.png', title: '0002', Author: '0x38...t433' },
+  { key: '3', link: '/a', img: '/st3.jpg', title: '0003', Author: '0x38...t433' },
+  { key: '4', link: '/a', img: '/st4.webp', title: '0004', Author: '0x38...t433' },
+  { key: '5', link: '/a', img: '/st5.png', title: '0005', Author: '0x38...t433' },
+  { key: '6', link: '/a', img: '/st6.jpg', title: '0006', Author: '0x38...t433' },
+  { key: '7', link: '/a', img: '/st7.jpg', title: '0007', Author: '0x38...t433' },
+  { key: '8', link: '/a', img: '/st8.webp', title: '0008', Author: '0x38...t433', },
+  { key: '9', link: '/a', img: '/st9.png', title: '00010', Author: '0x38...t433' },
+  { key: '10', link: '/a', img: '/st10.png', title: '00011', Author: '0x38...t433' },
+  { lkey: '11', ink: '/a', img: '/st11.jpg', title: '00012', Author: '0x38...t433' },
+  { key: '12', link: '/a', img: '/st12.png', title: '00013', Author: '0x38...t433' },
+  { key: '14', link: '/a', img: '/st4.webp', title: '00014', Author: '0x38...t433' },
+  { key: '13', link: '/a', img: '/st2.png', title: '00015', Author: '0x38...t433' },
+  { key: '15', link: '/a', img: '/st3.jpg', title: '00016', Author: '0x38...t433', },
+  { key: '16', link: '/a', img: '/st7.jpg', title: '00017', Author: '0x38...t433' }
 ];
+export async function getStaticProps() {
+  const res = await fetch('https://stampchain.io/api/stamps?page=1&page_size=1000')
+  const data = await res.json()
+  return {
+    props: { data },
+  }
+}
 export default Main;

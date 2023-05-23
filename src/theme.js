@@ -53,9 +53,6 @@ const theme = createTheme({
     primary: {
       main: '#0a1117',
     },
-    gold: {
-      main: '#eda803',
-    },
     secondary: {
       main: '#132028',
     }
