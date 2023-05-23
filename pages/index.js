@@ -47,12 +47,12 @@ function Main(props) {
             </Grid>
           </Grid>
         </Paper>
-        <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ pb: 2 }}>
-          <Paper component="form" sx={{ p: '2px 4px', mt: 2, display: 'flex', alignItems: 'center', width: 400 }}>
-            <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search google maps' }} />
+        <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ py: 2 }}>
+          <Paper component="form" sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}>
+            <InputBase sx={{ ml: 1, flex: 1, input: { color: '#c4cad6' }, label: { color: 'blue' } }} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search google maps' }} />
             <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-            <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions">
-              <SearchIcon />
+            <IconButton sx={{ p: '10px', color: '#c4cad6' }} aria-label="Search stamp, creator, TX, CPID">
+              <SearchIcon color="#c4cad6" />
             </IconButton>
           </Paper>
         </Grid>
