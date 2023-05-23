@@ -30,7 +30,7 @@ function Main(props) {
                 </Grid>
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
-                <Typography component="span" variant="h4" color="#ffffff">
+                <Typography component="span" variant="h4" color="#ffffff" gutterBottom>
                   BITCOIN STAMPS
                 </Typography>
                 <Typography sx={{ fontWeight: 500, }} variant="h5" paragraph color="#c4cad6">
