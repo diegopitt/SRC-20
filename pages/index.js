@@ -30,10 +30,10 @@ function Main(props) {
                 </Grid>
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
-                <Typography component="span" variant="h4" color="#ffffff" gutterBottom>
+                <Typography component="span" variant="h4" color="#eda803" gutterBottom>
                   BITCOIN STAMPS
                 </Typography>
-                <Typography sx={{ fontWeight: 500, }} variant="h5" paragraph color="#c4cad6">
+                <Typography sx={{ fontWeight: 500, mt:2 }} variant="h5" paragraph color="#c4cad6">
                   Unprunable UTXO Art, Because Sats Dont Exists
                 </Typography>
                 <Typography variant="subtitle1" color="#eda803">
@@ -47,7 +47,7 @@ function Main(props) {
           <Grid item xs={12} sm={10} sx={{ pb: 4 }}>
             <ImageList variant="standard" cols={matches ? 3 : 2} gap={26}>
               {stamps.map((item) => (
-                <ImageListItem onClick={() => { router.push(item.link) }} key={item.img} sx={{ m: { xs: 0, md: 2 } }}>
+                <ImageListItem onClick={() => {  }} key={item.img} sx={{ m: { xs: 0, md: 2 } }}>
                   <img style={{ minHeight: 240, maxHeight: 308 }} src={`cardo.jpg?w=248&fit=crop&auto=format`} srcSet={`cardo.jpg?w=248&fit=crop&auto=format&dpr=2 2x`} alt={item.title} loading="lazy" />
                   <ImageListItemBar sx={{ "& .MuiImageListItemBar-subtitle": (theme) => theme.typography.stampSubTitle, "& .MuiImageListItemBar-title": (theme) => theme.typography.stampTitle, background: 'rgba(0,0,0,0.86)' }} title={'Stamp:'} subtitle={'Author:'} />
                 </ImageListItem>
