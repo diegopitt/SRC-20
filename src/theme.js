@@ -68,10 +68,10 @@ const theme = createTheme({
       fontSize: 44,
       lineHeight: 1.1
     },
-    h3: {
+    h4: {
       fontWeight: 700,
     },
-    h4: {
+    h5: {
       fontWeight: 700,
     },
     h6: {
