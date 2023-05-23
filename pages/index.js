@@ -14,8 +14,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/router'
 import { useMediaQuery } from '@mui/material';
 
-function Main(stamps) {
-  const { data } = stamps;
+
+function Main(props) {
+  const { data } = props;
   console.log(data)
   const matches = useMediaQuery('(min-width:796px)');
   const router = useRouter();
@@ -73,10 +74,10 @@ function Main(stamps) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://stampchain.io/api/stamps?page=1&page_size=100')
+  const res = await fetch('https://stampchain.io/api/stamps?page=1&page_size=1000')
   const data = await res.json()
   return {
-    props: { stamps },
+    props: { data },
   }
 }
 export default Main;
