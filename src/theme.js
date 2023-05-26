@@ -45,7 +45,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: '#f8fcfc',
-          fontSize: 13,
+          fontSize: 12,
           fontWeight:500,
           fontFamily: Montse.style.fontFamily
         }
