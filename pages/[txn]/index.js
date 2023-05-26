@@ -41,10 +41,7 @@ function StampPage(props) {
                   <TableRow>
                     <TableCell component="th">CREATOR</TableCell>
                     <TableCell align="right">
-                      <Typography sx={{ maxWidth: 200,
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      textOverflow: 'ellipsis' }}>
+                      <Typography sx={{ maxWidth: 160, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                         {stamp.creator}
                       </Typography>
                     </TableCell>
