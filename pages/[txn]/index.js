@@ -19,7 +19,7 @@ function StampPage(props) {
       <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#ffffff", fontSize: 38, m:2 }} /></IconButton>
       <Grid container spacing={5}>
         <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3, }, }}>
-          <Paper sx={{ position: 'relative', p: 2, }}>
+          <Paper sx={{ position: 'relative', p: 1, }}>
             <img width="100%" src={`${stamp.stamp_url}`} srcSet={`${stamp.stamp_url}`} alt={stamp.title} loading="lazy" />
           </Paper>
         </Grid>
