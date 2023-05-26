@@ -25,7 +25,7 @@ function StampPage(props) {
         </Grid>
         <Grid item xs={12} md={4}>
           <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6">
               Details
             </Typography>
           </Paper>

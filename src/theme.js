@@ -59,6 +59,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: Montse.style.fontFamily,
+    color: '#f8fcfc',
     body2: {
       fontFamily: Dancing.style.fontFamily,
       fontWeight: 700,
