@@ -3,6 +3,9 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container'
 import { useRouter } from 'next/router'
+import IconButton from '@mui/material/IconButton';
+import ReplyTwoToneIcon from '@mui/icons-material/ReplyTwoTone';
+
 
 function StampPage(props) {
   const router = useRouter()
@@ -13,10 +16,11 @@ function StampPage(props) {
 
   return (
     <Container maxWidth="lg" sx={{ position: 'relative' }}>
+      <IconButton onClick={() => { router.replace("/") }}><ReplyTwoToneIcon sx={{ color: "#ffffff", fontSize: 38, m:2 }} /></IconButton>
       <Grid container spacing={5}>
         <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3, }, }}>
           <Paper sx={{ position: 'relative', p: 2, }}>
-            <img style={{ minHeight: 240, maxHeight: 308 }} src={`${stamp.stamp_url}`} srcSet={`${stamp.stamp_url}`} alt={stamp.title} loading="lazy" />
+            <img width="100%" src={`${stamp.stamp_url}`} srcSet={`${stamp.stamp_url}`} alt={stamp.title} loading="lazy" />
           </Paper>
         </Grid>
         <Grid item xs={12} md={4}>
