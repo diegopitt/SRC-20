@@ -37,7 +37,7 @@ const theme = createTheme({
     MuiDivider: {
       styleOverrides: {
         root: {
-          background:'#eda803'
+          background:'#24323d'
         }
       }
     },
