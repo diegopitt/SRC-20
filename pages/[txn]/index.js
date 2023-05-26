@@ -51,7 +51,7 @@ function StampPage(props) {
                     <TableCell align="right">{stamp.cpid}</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell component="th"sx={{whiteSpace: 'nowrap'}}>BLOCK INDEX</TableCell>
+                    <TableCell component="th">BLOCK INDEX</TableCell>
                     <TableCell align="right">{stamp.block_index}</TableCell>
                   </TableRow>
                   <TableRow>
