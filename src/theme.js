@@ -41,6 +41,16 @@ const theme = createTheme({
         }
       }
     },
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          color: '#f8fcfc',
+          fontSize: 14,
+          fontWeight:500,
+          fontFamily: Montse.style.fontFamily
+        }
+      }
+    },
     MuiPaper: {
       styleOverrides: {
         root: {
@@ -60,7 +70,6 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: Montse.style.fontFamily,
-    color: '#f8fcfc',
     body2: {
       fontFamily: Dancing.style.fontFamily,
       fontWeight: 700,
@@ -75,6 +84,7 @@ const theme = createTheme({
     },
     h6: {
       fontSize: 14,
+      color: '#eda803',
       fontWeight:500
     },
     body3: {
