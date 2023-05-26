@@ -2,7 +2,6 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 function StampPage(props) {
@@ -16,15 +15,14 @@ function StampPage(props) {
     <Container maxWidth="lg" sx={{ position: 'relative' }}>
       <Grid container spacing={5}>
         <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3, }, }}>
-          <Paper sx={{ position: 'relative', backgroundColor: '#f7dfca', p: 2, }}>
-            <Image src={stamp.stamp_url} width={500} height={500} alt="stamp" />
-
+          <Paper sx={{ position: 'relative', p: 2, }}>
+            <img style={{ minHeight: 240, maxHeight: 308 }} src={`${stamp.stamp_url}`} srcSet={`${stamp.stamp_url}`} alt={stamp.title} loading="lazy" />
           </Paper>
         </Grid>
         <Grid item xs={12} md={4}>
-          <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#f7dfca' }}>
+          <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
             <Typography variant="h6" gutterBottom>
-              PRESENTACION
+              Details
             </Typography>
           </Paper>
         </Grid>
