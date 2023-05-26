@@ -16,7 +16,7 @@ function StampPage(props) {
 
   return (
     <Container maxWidth="lg" sx={{ position: 'relative' }}>
-      <IconButton onClick={() => { router.replace("/") }}><ReplyTwoToneIcon sx={{ color: "#ffffff", fontSize: 38, m:2 }} /></IconButton>
+      <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#ffffff", fontSize: 38, m:2 }} /></IconButton>
       <Grid container spacing={5}>
         <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3, }, }}>
           <Paper sx={{ position: 'relative', p: 2, }}>
