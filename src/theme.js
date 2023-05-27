@@ -100,6 +100,11 @@ const theme = createTheme({
       color: '#eda803',
       fontWeight:500
     },
+    body4: {
+      color: '#828fa2',
+      fontWeight: 400,
+      fontSize: 14,
+    },
     body2: {
       color: '#828fa2',
       fontWeight: 400,
