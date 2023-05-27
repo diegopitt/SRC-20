@@ -38,16 +38,16 @@ function About() {
             <Typography variant="h6" gutterBottom>
               BITCON STAMPS
             </Typography>
-            <Typography component="p" variant="body4" gutterBottom>
+            <Typography align="justify" paragraph component="p" variant="body4" gutterBottom>
             Storing "Art on the Blockchain" as a method of achieving permanence is often a misnomer in the NFT world. Most NFTs are merely image pointers to centralized hosting or stored on-chain in prunable witness data. We propose a method of embedding base64-formatted image data using transaction outputs in a novel fashion.
             </Typography>
-            <Typography component="p" variant="body4" gutterBottom>
+            <Typography align="justify" paragraph component="p" variant="body4" gutterBottom>
             The means by which this is achieved is encoding an image's binary content to a base64 string, placing this string as a suffix to STAMP: in a transaction's description key, and then broadcasting it using the Counterparty protocol onto the Bitcoin ledger. The length of the string means that Counterparty defaults to bare multisig, thereby chunking the data into outputs rather than using the limited (and prunable) OP_RETURN. By doing so, the data is preserved in such a manner that is impossible to prune from a fullnode, preserving the data immutably forever.
             </Typography>
-            <Typography component="p" variant="body4" gutterBottom>
+            <Typography align="justify" paragraph component="p" variant="body4" gutterBottom>
             Given the cost of preserving data in this manner, we suggest the following guidance: 24x24 pixel, 8-colour-depth PNG or GIF. The constraints of this "canvas" are ideal for pixel art. In particular, the CryptoPunks use a native resolution of 24x24 pixels. While the technical specifications are open to interpretation and reinvention, inclusion within the Bitcoin Stamps directory will rely on a number of consensus rules on Bitcoin Stamps which are distinct from any other cases of using P2SH to encode data in this manner.
             </Typography>
-            <Typography component="p" variant="body4" gutterBottom>
+            <Typography align="justify" paragraph component="p" variant="body4" gutterBottom>
             Bitcoin Stamps will be numbered based on the transaction timestamp. This is to ensure that the Bitcoin Stamps directory is ordered chronologically. The first Bitcoin Stamp will be the first transaction to include the STAMP: string with a valid base64 string appended in the description key, and so on. A transaction with an invalid or indecipherable base64 string will not be considered a Bitcoin Stamp. The Bitcoin Stamp number will begin at zero and continue indefinitely.
             </Typography>
           </Paper>
