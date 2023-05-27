@@ -35,6 +35,9 @@ export default function TemporaryDrawer() {
           </ListSubheader>
         }>
         <Divider variant="middle" />
+        <Button size="small" onClick={() => { router.push('/') }}>
+          Home
+        </Button>
         <Button size="small">
           About
         </Button>
