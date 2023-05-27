@@ -34,7 +34,7 @@ export default function TemporaryDrawer() {
           </ListSubheader>
         }>
         <Divider variant="middle" />
-        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]}>
+        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]} onClick={() => { router.push('/') }}>
           Home
         </Button>
         <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/about'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]} onClick={() => { router.push('/about') }}>
