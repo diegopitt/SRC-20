@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 function Minting() {
 
@@ -56,7 +57,9 @@ function Minting() {
                 <Typography sx={{ mt: 2 }} variant="body1" paragraph color="#c4cad6">Asset Issuance:</Typography>
                 <TextField fullWidth hiddenLabel id="t1" variant="filled"  size="small" />
               </Paper>
-
+              <Grid container direction="row" justifyContent="center" alignItems="center">
+              <Button  onClick={() => { router.push('/minting') }}>QUOTE</Button>
+              </Grid>
             </Paper>
           </Grid>
         </Grid>
