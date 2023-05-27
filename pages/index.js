@@ -46,11 +46,11 @@ function Main(props) {
           </Grid>
         </Paper>
         <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ py: 2 }}>
-          <Paper component="form" sx={{ border: '1px solid #c4cad6', p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}>
-            <InputBase sx={{ ml: 1, flex: 1, input: { color: '#c4cad6' } }} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search' }} />
+          <Paper component="form" sx={{ border: '1px solid #394956', p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}>
+            <InputBase sx={{ ml: 1, flex: 1, input: { color: '#394956' } }} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search' }} />
             <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-            <IconButton sx={{ p: '10px', color: '#c4cad6' }} aria-label="Search stamp, creator, TX, CPID">
-              <SearchIcon color="#c4cad6" />
+            <IconButton sx={{ p: '10px', color: '#394956' }} aria-label="Search stamp, creator, TX, CPID">
+              <SearchIcon color="#394956" />
             </IconButton>
           </Paper>
         </Grid>
