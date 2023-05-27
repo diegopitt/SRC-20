@@ -37,10 +37,10 @@ export default function TemporaryDrawer() {
         <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]}>
           Home
         </Button>
-        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]} onClick={() => { router.push('/about') }}>
+        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/about'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]} onClick={() => { router.push('/about') }}>
           About
         </Button>
-        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]} onClick={() => { router.push('/minting') }}>
+        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/minting'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]} onClick={() => { router.push('/minting') }}>
           Stamp Minting
         </Button>
         <Button size="small">
