@@ -34,7 +34,12 @@ function Minting() {
 
         <Grid container direction="row" justifyContent="center" alignItems="center">
           <Grid item xs={12} sm={10} sx={{ pb: 4 }}>
-            0
+          <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
+            <Typography variant="h6">
+              STAMP MINTING UTILITY
+            </Typography>
+
+          </Paper>
           </Grid>
         </Grid>
       </Grid>
