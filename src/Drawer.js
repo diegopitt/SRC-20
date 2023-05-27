@@ -38,7 +38,7 @@ export default function TemporaryDrawer() {
         <Button size="small" onClick={() => { router.push('/') }}>
           Home
         </Button>
-        <Button size="small">
+        <Button size="small" onClick={() => { router.push('/about') }}>
           About
         </Button>
         <Button size="small" onClick={() => { router.push('/minting') }}>
