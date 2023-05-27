@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -27,12 +28,20 @@ export default function TemporaryDrawer() {
     <Box sx={{ backgroundColor: '#132028', height: '100%', width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }} role="presentation" onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'transparent' }} component="nav" aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader sx={{ bgcolor: 'transparent', fontWeight:600, fontSize:22, py:2, textAlign: 'center' }} component="div" id="nested-list-subheader">
+          <ListSubheader sx={{ color:'#eda803',bgcolor: 'transparent', fontWeight:600, fontSize:22, py:2, textAlign: 'center' }} component="div" id="nested-list-subheader">
             SRC-20 STAMPS
           </ListSubheader>
         }>
         <Divider variant="middle" />
-
+        <Button size="small">
+          About
+        </Button>
+        <Button size="small">
+          Stamp Minting
+        </Button>
+        <Button size="small">
+          Join Us!
+        </Button>
       </List>
     </Box>
   );

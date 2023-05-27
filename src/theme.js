@@ -37,7 +37,17 @@ const theme = createTheme({
     MuiDivider: {
       styleOverrides: {
         root: {
-          background:'#24323d'
+          background:'#24323d',
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          background:'#24323d',
+          color: '#f8fcfc',
+          display: 'block',
+          margin: '16px'
         }
       }
     },
