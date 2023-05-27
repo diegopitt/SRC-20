@@ -40,20 +40,20 @@ function Minting() {
               <Typography variant="h6">
                 STAMP MINTING UTILITY
               </Typography>
-              <Paper elevation={0} sx={{ p: 2, mb: 1, backgroundColor: '#132028' }}>
+              <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" color="#c4cad6">Artist / Creator Bitcoin Address.</Typography>
                 <Typography sx={{ mb: 3 }} variant="body2">Legacy (starts with 1) or Segwit (starts with bc1q)</Typography>
                 <TextField fullWidth hiddenLabel id="t1" variant="filled"  size="small" />
               </Paper>
-              <Paper elevation={0} sx={{ p: 2, mb: 1, backgroundColor: '#132028' }}>
+              <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" paragraph color="#c4cad6">Artist / Creator Name (optional):</Typography>
                 <TextField fullWidth hiddenLabel id="t1" variant="filled"  size="small" />
               </Paper>
-              <Paper elevation={0} sx={{ p: 2, mb: 1, backgroundColor: '#132028' }}>
+              <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" paragraph color="#c4cad6">Collection Name (optional):</Typography>
                 <TextField fullWidth hiddenLabel id="t1" variant="filled"  size="small" />
               </Paper>
-              <Paper elevation={0} sx={{ p: 2, mb: 1, backgroundColor: '#132028' }}>
+              <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" paragraph color="#c4cad6">Asset Issuance:</Typography>
                 <TextField fullWidth hiddenLabel id="t1" variant="filled"  size="small" />
               </Paper>
