@@ -7,8 +7,10 @@ import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
+import { useRouter } from 'next/router'
 
 export default function TemporaryDrawer() {
+  const router = useRouter();
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -36,7 +38,7 @@ export default function TemporaryDrawer() {
         <Button size="small">
           About
         </Button>
-        <Button size="small">
+        <Button size="small" onClick={() => { router.push('/minting') }}>
           Stamp Minting
         </Button>
         <Button size="small">
