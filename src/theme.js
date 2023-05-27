@@ -78,6 +78,14 @@ const theme = createTheme({
         }
       }
     },
+    MuiTableCell:{
+      styleOverrides: {
+        root: {
+          borderColor: '#828fa2',
+          color: '#c4cad6',
+        }
+      }
+    },
     MuiPaginationItem: {
       styleOverrides: {
         root: {
