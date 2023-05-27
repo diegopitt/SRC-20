@@ -56,7 +56,7 @@ function Main(props) {
           </Paper>
         </Grid>
         <Grid container direction="row" justifyContent="center" alignItems="center">
-          <Pagination sx={{ mt: 3 }} count={10} variant="outlined" color="action" />
+          <Pagination sx={{ mt: 3, mb: 1 }} count={10} variant="outlined" color="action" />
           <Grid item xs={12} sm={10} sx={{ pb: 4 }}>
             <ImageList variant="standard" cols={matches ? 3 : 2} gap={26}>
               {data.map((item) => (
