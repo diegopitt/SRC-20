@@ -34,13 +34,13 @@ export default function TemporaryDrawer() {
           </ListSubheader>
         }>
         <Divider variant="middle" />
-        <Button size="small" onClick={() => { router.push('/') }}>
+        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]}>
           Home
         </Button>
-        <Button size="small" onClick={() => { router.push('/about') }}>
+        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]} onClick={() => { router.push('/about') }}>
           About
         </Button>
-        <Button size="small" onClick={() => { router.push('/minting') }}>
+        <Button size="small" sx={[ { borderWidth: 0 }, router.pathname == '/'  && { backgroundColor: '#00b9d8', color: '#e4ffff' }, ]} onClick={() => { router.push('/minting') }}>
           Stamp Minting
         </Button>
         <Button size="small">
