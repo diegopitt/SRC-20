@@ -58,7 +58,7 @@ function Minting() {
                 <TextField fullWidth hiddenLabel id="t1" variant="filled"  size="small" />
               </Paper>
               <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Button onClick={() => {  }}>QUOTE</Button>
+                <Button sx={{ px:3 }} onClick={() => {  }}>QUOTE</Button>
               </Grid>
             </Paper>
           </Grid>
