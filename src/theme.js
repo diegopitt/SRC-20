@@ -89,12 +89,6 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: Montse.style.fontFamily,
-    body2: {
-      fontFamily: Dancing.style.fontFamily,
-      fontWeight: 700,
-      fontSize: 44,
-      lineHeight: 1.1
-    },
     h4: {
       fontWeight: 700,
     },
@@ -105,6 +99,11 @@ const theme = createTheme({
       fontSize: 14,
       color: '#eda803',
       fontWeight:500
+    },
+    body2: {
+      color: '#828fa2',
+      fontWeight: 400,
+      fontSize: 12,
     },
     body3: {
       fontFamily: Dancing.style.fontFamily,
