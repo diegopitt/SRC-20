@@ -51,6 +51,15 @@ const theme = createTheme({
         }
       }
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          background:'#24323d',
+          color: '#eda803',
+          display: 'block',
+        }
+      }
+    },
     MuiTableCell: {
       styleOverrides: {
         root: {
