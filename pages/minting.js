@@ -58,7 +58,7 @@ function Minting() {
                 <TextField fullWidth hiddenLabel id="t1" variant="filled"  size="small" />
               </Paper>
               <Grid container direction="row" justifyContent="center" alignItems="center">
-              <Button  onClick={() => { router.push('/minting') }}>QUOTE</Button>
+                <Button onClick={() => {  }}>QUOTE</Button>
               </Grid>
             </Paper>
           </Grid>

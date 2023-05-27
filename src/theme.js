@@ -45,7 +45,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           background:'#24323d',
-          color: '#f8fcfc',
+          color: '#828fa2',
           display: 'block',
           margin: '16px'
         }
