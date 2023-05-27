@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import FileUploadOutlined from '@mui/icons-material/FileUploadOutlined';
 
 function Minting() {
 
@@ -40,6 +42,21 @@ function Minting() {
               <Typography variant="h6">
                 STAMP MINTING UTILITY
               </Typography>
+              <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
+                <Typography sx={{ mt: 1 }} variant="body1" color="#c4cad6">Image File:</Typography>
+                <TextField fullWidth
+      variant="standard"          
+      type="text"
+      InputProps={{
+        endAdornment: (
+          <IconButton component="label">
+            <FileUploadOutlined color="action" />
+            <input styles={{display:"none"}} type="file" hidden name="[stamp]" />
+          </IconButton>
+        ),
+      }}
+    />
+              </Paper>
               <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" color="#c4cad6">Artist / Creator Bitcoin Address.</Typography>
                 <Typography sx={{ mb: 3 }} variant="body2">Legacy (starts with 1) or Segwit (starts with bc1q)</Typography>

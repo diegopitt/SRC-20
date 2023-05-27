@@ -80,6 +80,9 @@ const theme = createTheme({
     },
   },
   palette: {
+    action: {
+      main: '#eda803',
+    },
     primary: {
       main: '#0a1117',
     },
