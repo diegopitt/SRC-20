@@ -78,7 +78,15 @@ const theme = createTheme({
         }
       }
     },
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          color: '#f8fcfc',
+        }
+      }
+    },
   },
+  
   palette: {
     action: {
       main: '#eda803',

@@ -13,6 +13,7 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/router'
 import { useMediaQuery } from '@mui/material';
+import Pagination from '@mui/material/Pagination';
 
 function Main(props) {
   const { data } = props;
@@ -55,6 +56,7 @@ function Main(props) {
           </Paper>
         </Grid>
         <Grid container direction="row" justifyContent="center" alignItems="center">
+          <Pagination sx={{ mt: 3 }} count={10} variant="outlined" color="action" />
           <Grid item xs={12} sm={10} sx={{ pb: 4 }}>
             <ImageList variant="standard" cols={matches ? 3 : 2} gap={26}>
               {data.map((item) => (

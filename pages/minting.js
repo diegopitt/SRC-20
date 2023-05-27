@@ -44,18 +44,16 @@ function Minting() {
               </Typography>
               <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" color="#c4cad6">Image File:</Typography>
-                <TextField fullWidth
-      variant="standard"          
-      type="text"
-      InputProps={{
-        endAdornment: (
-          <IconButton component="label">
-            <FileUploadOutlined color="action" />
-            <input styles={{display:"none"}} type="file" hidden name="[stamp]" />
-          </IconButton>
-        ),
-      }}
-    />
+                <TextField fullWidth  variant="standard" type="text"
+                  InputProps={{
+                    endAdornment: (
+                      <IconButton component="label">
+                        <FileUploadOutlined color="action" />
+                        <input styles={{display:"none"}} type="file" hidden name="[stamp]" />
+                      </IconButton>
+                    ),
+                  }}
+                />
               </Paper>
               <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" color="#c4cad6">Artist / Creator Bitcoin Address.</Typography>
