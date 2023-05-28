@@ -4,44 +4,29 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container'
 import { useRouter } from 'next/router'
 import IconButton from '@mui/material/IconButton';
-import ReplyTwoToneIcon from '@mui/icons-material/ReplyTwoTone';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
+import ReplyTwoToneIcon from '@mui/icons-material/ReplyTwoTone';
+import ContentCopySharpIcon from '@mui/icons-material/ContentCopySharp';
 
 function StampPage(props) {
   const router = useRouter()
   const { stamp } = props;
-
   const stampTXN = router.query.txn
 
   return (
     <>
       <Paper square elevation={3} sx={{ backgroundColor: '#132028', mb: 4 }}>
-
         <Grid container direction="row" justifyContent="center" alignItems="center">
-
-
-
-
-
-
-          <Grid container direction="row" justifyContent="center" alignItems="center">
-            <Grid container item xs={6} sx={{ flexGrow: 1 }}>
-              <Typography sx={{ color: '#eda803', fontWeight: 600, fontSize: 22, py: 2, ml:2 }} component="span">SRC-20</Typography>
-            </Grid>
-            <Grid container item xs={6} sx={{ flexGrow: 1 }} direction="row" justifyContent="flex-end" alignItems="flex-end">
-              <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#828fa2", fontSize: 38, mx: 2, my: 1 }} /></IconButton>
-            </Grid>
+          <Grid container item xs={6} sx={{ flexGrow: 1 }}>
+            <Typography sx={{ color: '#eda803', fontWeight: 600, fontSize: 22, py: 2, ml:2 }} component="span">SRC-20</Typography>
           </Grid>
-
-
-
-
-
-
+          <Grid container item xs={6} sx={{ flexGrow: 1 }} direction="row" justifyContent="flex-end" alignItems="flex-end">
+            <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#828fa2", fontSize: 33, mx: 2, my: 1 }} /></IconButton>
+          </Grid>
         </Grid>
       </Paper>
       <Container maxWidth="lg" sx={{ position: 'relative' }}>
@@ -59,6 +44,9 @@ function StampPage(props) {
               <Typography component="span" variant="body2">
                 {stamp.creator}
               </Typography>
+              <IconButton aria-label="copy" onClick={() => { navigator.clipboard.writeText(stamp.creator) }} >
+                <ContentCopySharpIcon color="action" />
+              </IconButton>
             </Paper>
             <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
               <Typography variant="h6">
