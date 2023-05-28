@@ -73,7 +73,7 @@ function Main(props) {
               ))}
             </ImageList>
           </Grid>
-          <Pagination sx={{ mt: 3, mb: 1 }} onChange={handlePageChange} count={10} page={page} variant="outlined" color="action" />
+          <Pagination sx={{ mt: 2, mb: 4 }} onChange={handlePageChange} count={10} page={page} variant="outlined" color="action" />
         </Grid>
       </Grid>
     </div>
