@@ -57,7 +57,7 @@ function Main(props) {
         </Grid>
         <Grid container direction="row" justifyContent="center" alignItems="center">
           <Pagination sx={{ mt: 3, mb: 1 }} count={10} variant="outlined" color="action" />
-          <Grid item xs={12} sm={10} sx={{ pb: 4 }}>
+          <Grid item xs={12} sm={10}>
             <ImageList variant="standard" cols={matches ? 3 : 2} gap={26}>
               {data.map((item) => (
                 <ImageListItem onClick={() => {router.push(`/${item.tx_hash}`) }} key={item.stamp} sx={{ m: { xs: 0, md: 2 } }}>
@@ -67,7 +67,7 @@ function Main(props) {
               ))}
             </ImageList>
           </Grid>
-          <Pagination sx={{ mt: 3, mb: 1 }} count={10} variant="outlined" color="action" />
+          <Pagination sx={{ mt: 1, mb: 4 }} count={10} variant="outlined" color="action" />
         </Grid>
       </Grid>
     </div>
