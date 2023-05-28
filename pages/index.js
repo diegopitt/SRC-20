@@ -74,7 +74,7 @@ function Main(props) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://stampchain.io/api/stamps?page=1&page_size=1000')
+  const res = await fetch('https://stampchain.io/api/stamps?page=2&page_size=30')
   const data = await res.json()
   return {
     props: { data },
