@@ -70,7 +70,7 @@ function Minting() {
                 <TextField fullWidth hiddenLabel id="t1" variant="filled"  size="small" />
               </Paper>
               <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Button sx={{ px:4, backgroundColor: '#00b9d8', color: '#e4ffff', fontSize: 16 }} onClick={() => {  }}>QUOTE</Button>
+                <Button sx={{ px:4, my:2, backgroundColor: '#00b9d8', color: '#e4ffff', fontSize: 16 }} onClick={() => {  }}>QUOTE</Button>
               </Grid>
             </Paper>
           </Grid>
