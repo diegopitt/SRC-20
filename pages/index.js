@@ -32,7 +32,7 @@ function Main(props) {
     if (searchText == "") return false
     const res = await fetch(`https://stampchain.io/api/stamps?creator=${searchText}`)
     const data = await res.json()
-    setSData("data")
+    setSData(data)
   }
   return (
     <div>
@@ -56,7 +56,7 @@ function Main(props) {
           <Paper component="form" sx={{ border: '1px solid #394956', p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}>
             <InputBase sx={{ ml: 1, flex: 1, input: { color: '#394956' } }} onChange={(e)=> setSearchText(e.target.value)} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search' }} />
             <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-            <IconButton onClick={() => { handleSearch }} sx={{ p: '10px', color: '#394956' }} aria-label="Search stamp, creator, TX, CPID">
+            <IconButton onClick={handleSearch} sx={{ p: '10px', color: '#394956' }} aria-label="Search stamp, creator, TX, CPID">
               <SearchIcon color="#394956" />
             </IconButton>
           </Paper>
