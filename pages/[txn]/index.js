@@ -19,7 +19,11 @@ function StampPage(props) {
 
   return (
     <Container maxWidth="lg" sx={{ position: 'relative' }}>
-      <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#ffffff", fontSize: 38, m: 2 }} /></IconButton>
+      <Paper square elevation={3} sx={{ backgroundColor: '#132028', mb: 4 }}>
+        <Grid container sm={12} sx={{ flexGrow: 1 }} direction="row" justifyContent="flex-end" alignItems="flex-end">
+          <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#828fa2", fontSize: 38, m: 2 }} /></IconButton>
+        </Grid>
+      </Paper>
       <Grid container spacing={5}>
         <Grid item xs={12} md={7} sx={{ '& .markdown': { py: 3, }, }}>
           <Paper sx={{ position: 'relative', p: 1, }}>
@@ -27,12 +31,12 @@ function StampPage(props) {
           </Paper>
         </Grid>
         <Grid item xs={12} md={5}>
-        <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
+          <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
             <Typography variant="h6">
               CREATOR
             </Typography>
             <Typography component="span" variant="body2">
-            {stamp.creator}
+              {stamp.creator}
             </Typography>
           </Paper>
           <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
@@ -51,7 +55,7 @@ function StampPage(props) {
                     <TableCell align="right">{stamp.cpid}</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell component="th"sx={{whiteSpace: 'nowrap'}}>BLOCK INDEX</TableCell>
+                    <TableCell component="th" sx={{ whiteSpace: 'nowrap' }}>BLOCK INDEX</TableCell>
                     <TableCell align="right">{stamp.block_index}</TableCell>
                   </TableRow>
                   <TableRow>
