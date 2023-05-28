@@ -53,7 +53,7 @@ function StampPage(props) {
               <Typography component="div" variant="body2" noWrap sx={{ maxWidth: 250, display: "inline-block" }}>
                 {stamp.tx_hash}
               </Typography>
-              <IconButton aria-label="copy" onClick={() => { navigator.clipboard.writeText(stamp.creator) }} >
+              <IconButton aria-label="copy" onClick={() => { navigator.clipboard.writeText(stamp.tx_hash) }} >
                 <ContentCopySharpIcon sx={{ fontSize: 18}} color="action" />
               </IconButton>
             </Paper>
