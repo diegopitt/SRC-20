@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from "react";
 import Drawer from '../src/Drawer';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -19,6 +19,15 @@ function Main(props) {
   const { data } = props;
   const matches = useMediaQuery('(min-width:796px)');
   const router = useRouter();
+  let [page, setPage] = useState(1);
+  let [Sdata, setSData] = useState(data);
+  const handlePageChange = async (e, p) => {
+    const res = await fetch(`https://stampchain.io/api/stamps?page=${p}&page_size=14`)
+    const data = await res.json()
+    setSData(data)
+    setPage(p);
+  }
+
   return (
     <div>
       <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3 } }}>
@@ -36,12 +45,8 @@ function Main(props) {
                 <Typography component="span" variant="h4" color="#eda803" gutterBottom>
                   BITCOIN STAMPS
                 </Typography>
-                <Typography sx={{ fontWeight: 500, mt: 2 }} variant="h5" paragraph color="#c4cad6">
-                  Unprunable UTXO Art, Because Sats Dont Exists
-                </Typography>
-                <Typography variant="subtitle1" color="#eda803">
-                  Introducing <b>SRC-20</b> Token Specs!
-                </Typography>
+                <Typography sx={{ fontWeight: 500, mt: 2 }} variant="h5" paragraph color="#c4cad6">Unprunable UTXO Art, Because Sats Dont Exists</Typography>
+                <Typography variant="subtitle1" color="#eda803">Introducing <b>SRC-20</b> Token Specs!</Typography>
               </Box>
             </Grid>
           </Grid>
@@ -56,10 +61,10 @@ function Main(props) {
           </Paper>
         </Grid>
         <Grid container direction="row" justifyContent="center" alignItems="center">
-          <Pagination sx={{ mt: 3, mb: 1 }} count={10} variant="outlined" color="action" />
+          <Pagination sx={{ mt: 3, mb: 1 }} onChange={handlePageChange} count={10} page={page} variant="outlined" color="action" />
           <Grid item xs={12} sm={10}>
             <ImageList variant="standard" cols={matches ? 3 : 2} gap={26}>
-              {data.map((item) => (
+              {Sdata.map((item) => (
                 <ImageListItem onClick={() => {router.push(`/${item.tx_hash}`) }} key={item.stamp} sx={{ m: { xs: 0, md: 2 } }}>
                   <img style={{ minHeight: 240, maxHeight: 308 }} src={`${item.stamp_url}`} srcSet={`${item.stamp_url}`} alt={item.title} loading="lazy" />
                   <ImageListItemBar sx={{ "& .MuiImageListItemBar-subtitle": (theme) => theme.typography.stampSubTitle, "& .MuiImageListItemBar-title": (theme) => theme.typography.stampTitle, background: 'rgba(0,0,0,0.86)' }} title={`Stamp ${item.stamp}`} subtitle={`${item.creator}`} />
@@ -67,7 +72,7 @@ function Main(props) {
               ))}
             </ImageList>
           </Grid>
-          <Pagination sx={{ mt: 1, mb: 4 }} count={10} variant="outlined" color="action" />
+          <Pagination sx={{ mt: 3, mb: 1 }} onChange={handlePageChange} count={10} page={page} variant="outlined" color="action" />
         </Grid>
       </Grid>
     </div>

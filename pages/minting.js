@@ -10,7 +10,6 @@ import IconButton from '@mui/material/IconButton';
 import FileUploadOutlined from '@mui/icons-material/FileUploadOutlined';
 
 function Minting() {
-
   return (
     <div>
       <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3 } }}>
@@ -25,12 +24,8 @@ function Minting() {
                 </Grid>
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
-                <Typography component="span" variant="h4" color="#eda803" gutterBottom>
-                  MINTING STAMPS
-                </Typography>
-                <Typography sx={{ fontWeight: 500, mt: 2 }} variant="h5" paragraph color="#c4cad6">
-                  Unprunable UTXO Art, Because Sats Dont Exists
-                </Typography>
+                <Typography component="span" variant="h4" color="#eda803" gutterBottom>MINTING STAMPS</Typography>
+                <Typography sx={{ fontWeight: 500, mt: 2 }} variant="h5" paragraph color="#c4cad6">Unprunable UTXO Art, Because Sats Dont Exists</Typography>
               </Box>
             </Grid>
           </Grid>
@@ -41,16 +36,7 @@ function Minting() {
               <Typography variant="h6">STAMP MINTING UTILITY</Typography>
               <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" color="#c4cad6">Image File:</Typography>
-                <TextField fullWidth  variant="standard" type="text"
-                  InputProps={{
-                    endAdornment: (
-                      <IconButton component="label">
-                        <FileUploadOutlined color="action" />
-                        <input styles={{display:"none"}} type="file" hidden name="[stamp]" />
-                      </IconButton>
-                    ),
-                  }}
-                />
+                <TextField fullWidth variant="standard" type="text" InputProps={{ endAdornment: (<IconButton component="label"><FileUploadOutlined color="action" /><input styles={{display:"none"}} type="file" hidden name="[stamp]" /></IconButton>) }} />
               </Paper>
               <Paper elevation={0} sx={{ p: 2, backgroundColor: '#132028' }}>
                 <Typography sx={{ mt: 1 }} variant="body1" color="#c4cad6">Artist / Creator Bitcoin Address.</Typography>

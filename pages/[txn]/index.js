@@ -24,64 +24,64 @@ function StampPage(props) {
           <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#828fa2", fontSize: 38, mx: 2, my: 1 }} /></IconButton>
         </Grid>
       </Paper>
-    <Container maxWidth="lg" sx={{ position: 'relative' }}>
-      <Grid container spacing={5}>
-        <Grid item xs={12} md={7} sx={{ '& .markdown': { py: 3, }, }}>
-          <Paper sx={{ position: 'relative', p: 1, }}>
-            <img width="100%" src={`${stamp.stamp_url}`} srcSet={`${stamp.stamp_url}`} alt={stamp.title} loading="lazy" />
-          </Paper>
+      <Container maxWidth="lg" sx={{ position: 'relative' }}>
+        <Grid container spacing={5}>
+          <Grid item xs={12} md={7} sx={{ '& .markdown': { py: 3, }, }}>
+            <Paper sx={{ position: 'relative', p: 1, }}>
+              <img width="100%" src={`${stamp.stamp_url}`} srcSet={`${stamp.stamp_url}`} alt={stamp.title} loading="lazy" />
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={5}>
+            <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
+              <Typography variant="h6">
+                CREATOR
+              </Typography>
+              <Typography component="span" variant="body2">
+                {stamp.creator}
+              </Typography>
+            </Paper>
+            <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
+              <Typography variant="h6">
+                ASSET DETAILS
+              </Typography>
+              <TableContainer component={Paper}>
+                <Table aria-label="Details">
+                  <TableBody>
+                    <TableRow>
+                      <TableCell component="th">STAMP</TableCell>
+                      <TableCell align="right">{stamp.stamp}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell component="th">CPID</TableCell>
+                      <TableCell align="right">{stamp.cpid}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell component="th" sx={{ whiteSpace: 'nowrap' }}>BLOCK INDEX</TableCell>
+                      <TableCell align="right">{stamp.block_index}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell component="th">SUPPLY</TableCell>
+                      <TableCell align="right">{stamp.supply}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell component="th">DIVISIBLE</TableCell>
+                      <TableCell align="right">{stamp.divisible}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell component="th">LOCKED</TableCell>
+                      <TableCell align="right">{stamp.locked}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell component="th">BTC TX</TableCell>
+                      <TableCell align="right"></TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Paper>
+          </Grid>
         </Grid>
-        <Grid item xs={12} md={5}>
-          <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
-            <Typography variant="h6">
-              CREATOR
-            </Typography>
-            <Typography component="span" variant="body2">
-              {stamp.creator}
-            </Typography>
-          </Paper>
-          <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
-            <Typography variant="h6">
-              ASSET DETAILS
-            </Typography>
-            <TableContainer component={Paper}>
-              <Table aria-label="Details">
-                <TableBody>
-                  <TableRow>
-                    <TableCell component="th">STAMP</TableCell>
-                    <TableCell align="right">{stamp.stamp}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell component="th">CPID</TableCell>
-                    <TableCell align="right">{stamp.cpid}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell component="th" sx={{ whiteSpace: 'nowrap' }}>BLOCK INDEX</TableCell>
-                    <TableCell align="right">{stamp.block_index}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell component="th">SUPPLY</TableCell>
-                    <TableCell align="right">{stamp.supply}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell component="th">DIVISIBLE</TableCell>
-                    <TableCell align="right">{stamp.divisible}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell component="th">LOCKED</TableCell>
-                    <TableCell align="right">{stamp.locked}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell component="th">BTC TX</TableCell>
-                    <TableCell align="right"></TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Paper>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
     </>
   )
 }
