@@ -108,8 +108,8 @@ const theme = createTheme({
   typography: {
     fontFamily: Montse.style.fontFamily,
     h4: {
-      fontSize: 26,
-      fontWeight: 600,
+      fontSize: 28,
+      fontWeight: 700,
     },
     h5: {
       fontWeight: 700,
