@@ -45,7 +45,7 @@ function Main(props) {
                 <Drawer />
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: {searchText} }}>
-                <Typography component="span" variant="h4" color="#eda803" gutterBottom>BITCOIN STAMPS</Typography>
+                <Typography component="span" variant="h4" color="#eda803" noWrap gutterBottom>BITCOIN STAMPS</Typography>
                 <Typography sx={{ fontWeight: 500, mt: 2 }} variant="h5" paragraph color="#c4cad6">Unprunable UTXO Art, Because Sats Dont Exists</Typography>
                 <Typography variant="subtitle1" color="#eda803">Introducing <b>SRC-20</b> Token Specs!</Typography>
               </Box>
