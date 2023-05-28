@@ -21,13 +21,19 @@ function Main(props) {
   const router = useRouter();
   let [page, setPage] = useState(1);
   let [Sdata, setSData] = useState(data);
+  let [searchText, setSearchText] = useState("");
   const handlePageChange = async (e, p) => {
     const res = await fetch(`https://stampchain.io/api/stamps?page=${p}&page_size=10`)
     const data = await res.json()
     setSData(data)
     setPage(p);
   }
-
+  const handleSearch = async () => {
+    if (searchText == "") return false
+    const res = await fetch(`https://stampchain.io/api/stamps?creator=${searchText}`)
+    const data = await res.json()
+    setSData("data")
+  }
   return (
     <div>
       <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3 } }}>
@@ -38,10 +44,8 @@ function Main(props) {
               <Grid container direction="row" justifyContent="flex-end" alignItems="flex-end" sx={{ p: 2 }}>
                 <Drawer />
               </Grid>
-              <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
-                <Typography component="span" variant="h4" color="#eda803" gutterBottom>
-                  BITCOIN STAMPS
-                </Typography>
+              <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: {searchText} }}>
+                <Typography component="span" variant="h4" color="#eda803" gutterBottom>BITCOIN STAMPS</Typography>
                 <Typography sx={{ fontWeight: 500, mt: 2 }} variant="h5" paragraph color="#c4cad6">Unprunable UTXO Art, Because Sats Dont Exists</Typography>
                 <Typography variant="subtitle1" color="#eda803">Introducing <b>SRC-20</b> Token Specs!</Typography>
               </Box>
@@ -50,9 +54,9 @@ function Main(props) {
         </Paper>
         <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ py: 2 }}>
           <Paper component="form" sx={{ border: '1px solid #394956', p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}>
-            <InputBase sx={{ ml: 1, flex: 1, input: { color: '#394956' } }} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search' }} />
+            <InputBase sx={{ ml: 1, flex: 1, input: { color: '#394956' } }} onChange={(e)=> setSearchText(e.target.value)} placeholder="Search stamp, creator, TX, CPID" inputProps={{ 'aria-label': 'search' }} />
             <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-            <IconButton sx={{ p: '10px', color: '#394956' }} aria-label="Search stamp, creator, TX, CPID">
+            <IconButton onClick={() => { handleSearch }} sx={{ p: '10px', color: '#394956' }} aria-label="Search stamp, creator, TX, CPID">
               <SearchIcon color="#394956" />
             </IconButton>
           </Paper>
