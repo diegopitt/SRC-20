@@ -20,8 +20,16 @@ function StampPage(props) {
   return (
     <>
       <Paper square elevation={3} sx={{ backgroundColor: '#132028', mb: 4 }}>
-        <Grid container sm={12} sx={{ flexGrow: 1 }} direction="row" justifyContent="flex-end" alignItems="flex-end">
+
+        <Grid container direction="row" justifyContent="center" alignItems="center">
+          <Grid container sm={6} sx={{ flexGrow: 1 }}>
+            <Typography sx={{ color: '#eda803', fontWeight: 600, fontSize: 22, py: 2, pl:4  }} component="div">
+              SRC-20
+            </Typography>
+          </Grid>
+          <Grid container md={6} sx={{ flexGrow: 1}} direction="row" justifyContent="flex-end" alignItems="flex-end">
           <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#828fa2", fontSize: 38, mx: 2, my: 1 }} /></IconButton>
+          </Grid>
         </Grid>
       </Paper>
       <Container maxWidth="lg" sx={{ position: 'relative' }}>
