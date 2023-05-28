@@ -94,7 +94,6 @@ const theme = createTheme({
       }
     },
   },
-  
   palette: {
     action: {
       main: '#eda803',
@@ -143,7 +142,7 @@ const theme = createTheme({
     stampSubTitle: {
       fontFamily: Montse.style.fontFamily,
       fontWeight: 400,
-      fontSize: 14,
+      fontSize: 12,
       lineHeight: 1.35,
     },
     stampTitle: {
