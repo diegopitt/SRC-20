@@ -18,12 +18,8 @@ function About() {
                 <Drawer />
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
-                <Typography sx={{ fontWeight: 500 }} variant="h5" paragraph color="#c4cad6">
-                  About
-                </Typography>
-                <Typography component="span" variant="h4" color="#eda803" gutterBottom>
-                  BITCOIN STAMPS
-                </Typography>
+                <Typography sx={{ fontWeight: 500 }} variant="h5" paragraph color="#c4cad6">About</Typography>
+                <Typography component="span" variant="h4" color="#eda803" gutterBottom>BITCOIN STAMPS</Typography>
               </Box>
             </Grid>
           </Grid>
