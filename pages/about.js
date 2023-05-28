@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 
 function About() {
-
   return (
     <div>
       <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3 } }}>
@@ -24,7 +23,6 @@ function About() {
             </Grid>
           </Grid>
         </Paper>
-
         <Grid container direction="row" justifyContent="center" alignItems="center">
           <Grid item xs={12} sm={10} sx={{ pb: 4 }}>
           <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>

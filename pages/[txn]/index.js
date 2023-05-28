@@ -16,7 +16,6 @@ function StampPage(props) {
   const router = useRouter()
   const { stamp } = props;
   const stampTXN = router.query.txn
-
   return (
     <>
       <Paper square elevation={3} sx={{ backgroundColor: '#132028', mb: 4 }}>
