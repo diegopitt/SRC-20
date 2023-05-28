@@ -31,7 +31,7 @@ function StampPage(props) {
             <Typography variant="h6">
               CREATOR
             </Typography>
-            <Typography component="span" variant="body4">
+            <Typography component="span" variant="body2">
             {stamp.creator}
             </Typography>
           </Paper>
