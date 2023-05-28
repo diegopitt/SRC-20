@@ -12,8 +12,8 @@ function About() {
       <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3 } }}>
         <Paper sx={{ position: 'relative', mb: 4 }}>
           <Box sx={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0 }} />
-          <Grid container>
-            <Grid item md={12}>
+          <Grid container sx={{ flexGrow: 1 }}>
+            <Grid item xs={12}>
               <Grid container direction="row" justifyContent="flex-end" alignItems="flex-end" sx={{ p: 2 }}>
                 <Drawer />
               </Grid>
