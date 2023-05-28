@@ -18,12 +18,13 @@ function StampPage(props) {
   const stampTXN = router.query.txn
 
   return (
-    <Container maxWidth="lg" sx={{ position: 'relative' }}>
+    <>
       <Paper square elevation={3} sx={{ backgroundColor: '#132028', mb: 4 }}>
         <Grid container sm={12} sx={{ flexGrow: 1 }} direction="row" justifyContent="flex-end" alignItems="flex-end">
-          <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#828fa2", fontSize: 38, m: 2 }} /></IconButton>
+          <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#828fa2", fontSize: 38, mx: 2, my: 1 }} /></IconButton>
         </Grid>
       </Paper>
+    <Container maxWidth="lg" sx={{ position: 'relative' }}>
       <Grid container spacing={5}>
         <Grid item xs={12} md={7} sx={{ '& .markdown': { py: 3, }, }}>
           <Paper sx={{ position: 'relative', p: 1, }}>
@@ -81,6 +82,7 @@ function StampPage(props) {
         </Grid>
       </Grid>
     </Container>
+    </>
   )
 }
 
