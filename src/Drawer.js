@@ -50,7 +50,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div sx={{ color: "#ffffff", fontSize: 34 }} style={{ marginBottom: "-8px", paddingRight: "18px", paddingTop: "18px", textAlign: "right", width: '100%' }}>
-      <IconButton onClick={toggleDrawer('right', true)}><MenuTwoToneIcon sx={{ color: "#00b9d8", fontSize: 38 }} /></IconButton>
+      <IconButton onClick={toggleDrawer('right', true)}><MenuTwoToneIcon sx={{ color: "#00b9d8", fontSize: 32 }} /></IconButton>
       <Drawer anchor={'right'} open={state['right']} onClose={toggleDrawer('right', false)}>
         {list('right')}
       </Drawer>
