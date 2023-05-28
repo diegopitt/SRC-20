@@ -40,7 +40,7 @@ function StampPage(props) {
               <Typography variant="h6">
                 CREATOR
               </Typography>
-              <Typography component="span" variant="body2" noWrap sx={{ maxWidth: 256, display: "inline-block"}}>
+              <Typography component="span" variant="body2" noWrap sx={{ Width: 256, display: "inline-block"}}>
                 {stamp.creator}
               </Typography>
               <IconButton sx={{ mt: -1}} aria-label="copy" onClick={() => { navigator.clipboard.writeText(stamp.creator) }} >
@@ -49,7 +49,7 @@ function StampPage(props) {
               <Typography variant="h6" sx={{ mt: 2}}>
                 TXN
               </Typography>
-              <Typography component="div" variant="body2" noWrap sx={{ maxWidth: 256, display: "inline-block" }}>
+              <Typography component="div" variant="body2" noWrap sx={{ Width: 256, display: "inline-block" }}>
                 {stamp.tx_hash}
               </Typography>
               <IconButton sx={{ mt: -1}} aria-label="copy" onClick={() => { navigator.clipboard.writeText(stamp.tx_hash) }} >
