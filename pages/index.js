@@ -22,7 +22,7 @@ function Main(props) {
   let [page, setPage] = useState(1);
   let [Sdata, setSData] = useState(data);
   const handlePageChange = async (e, p) => {
-    const res = await fetch(`https://stampchain.io/api/stamps?page=${p}&page_size=14`)
+    const res = await fetch(`https://stampchain.io/api/stamps?page=${p}&page_size=12`)
     const data = await res.json()
     setSData(data)
     setPage(p);
@@ -77,7 +77,7 @@ function Main(props) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://stampchain.io/api/stamps?page=3&page_size=14')
+  const res = await fetch('https://stampchain.io/api/stamps?page=3&page_size=12')
   const data = await res.json()
   return {
     props: { data },
