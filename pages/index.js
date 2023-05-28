@@ -67,6 +67,7 @@ function Main(props) {
               ))}
             </ImageList>
           </Grid>
+          <Pagination sx={{ mt: 3, mb: 1 }} count={10} variant="outlined" color="action" />
         </Grid>
       </Grid>
     </div>
