@@ -34,12 +34,9 @@ function Main(props) {
         <Paper sx={{ position: 'relative', mb: 4 }}>
           <Box sx={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0 }} />
           <Grid container>
-            <Grid item md={12}>
-              <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid item sm={6} sx={{ flexGrow: 1 }}></Grid>
-                <Grid item md={6} sx={{ flexGrow: 1 }}>
-                  <Drawer />
-                </Grid>
+            <Grid item md={12} sx={{ flexGrow: 1 }}>
+              <Grid container direction="row" justifyContent="flex-end" alignItems="flex-end" sx={{ p: 3 }}>
+                <Drawer />
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
                 <Typography component="span" variant="h4" color="#eda803" gutterBottom>
@@ -65,7 +62,7 @@ function Main(props) {
           <Grid item xs={12} sm={10}>
             <ImageList variant="standard" cols={matches ? 3 : 2} gap={26}>
               {Sdata.map((item) => (
-                <ImageListItem onClick={() => {router.push(`/${item.tx_hash}`) }} key={item.stamp} sx={{ m: { xs: 0, md: 2 } }}>
+                <ImageListItem onClick={() => { router.push(`/${item.tx_hash}`) }} key={item.stamp} sx={{ m: { xs: 0, md: 2 } }}>
                   <img style={{ minHeight: 240, maxHeight: 308 }} src={`${item.stamp_url}`} srcSet={`${item.stamp_url}`} alt={item.title} loading="lazy" />
                   <ImageListItemBar sx={{ "& .MuiImageListItemBar-subtitle": (theme) => theme.typography.stampSubTitle, "& .MuiImageListItemBar-title": (theme) => theme.typography.stampTitle, background: 'rgba(0,0,0,0.86)' }} title={`Stamp ${item.stamp}`} subtitle={`${item.creator}`} />
                 </ImageListItem>
