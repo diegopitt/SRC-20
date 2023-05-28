@@ -143,7 +143,7 @@ const theme = createTheme({
       fontFamily: Montse.style.fontFamily,
       fontWeight: 400,
       fontSize: 10,
-      lineHeight: 1.35,
+      lineHeight: 1.45,
     },
     stampTitle: {
       fontFamily: Dancing.style.fontFamily,
