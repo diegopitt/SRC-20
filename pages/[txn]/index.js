@@ -27,6 +27,14 @@ function StampPage(props) {
           </Paper>
         </Grid>
         <Grid item xs={12} md={5}>
+        <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
+            <Typography variant="h6">
+              CREATOR
+            </Typography>
+            <Typography component="span" variant="body4">
+            {stamp.creator}
+            </Typography>
+          </Paper>
           <Paper elevation={0} sx={{ p: 2, mb: 4, backgroundColor: '#132028' }}>
             <Typography variant="h6">
               ASSET DETAILS
@@ -37,14 +45,6 @@ function StampPage(props) {
                   <TableRow>
                     <TableCell component="th">STAMP</TableCell>
                     <TableCell align="right">{stamp.stamp}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell component="th">CREATOR</TableCell>
-                    <TableCell align="right">
-                      <Typography sx={{textAlign: 'right', maxWidth: 150, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                        {stamp.creator}
-                      </Typography>
-                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell component="th">CPID</TableCell>
