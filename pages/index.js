@@ -35,7 +35,7 @@ function Main(props) {
           <Box sx={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0 }} />
           <Grid container>
             <Grid item md={12} sx={{ flexGrow: 1 }}>
-              <Grid container direction="row" justifyContent="flex-end" alignItems="flex-end" sx={{ p: 3 }}>
+              <Grid container direction="row" justifyContent="flex-end" alignItems="flex-end" sx={{ p: 2 }}>
                 <Drawer />
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>

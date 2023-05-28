@@ -17,11 +17,8 @@ function Minting() {
           <Box sx={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0 }} />
           <Grid container>
             <Grid item md={12}>
-              <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid item sm={6} sx={{ flexGrow: 1 }}></Grid>
-                <Grid item md={6} sx={{ flexGrow: 1 }}>
-                  <Drawer />
-                </Grid>
+              <Grid container direction="row" justifyContent="flex-end" alignItems="flex-end" sx={{ p: 2 }}>
+                <Drawer />
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
                 <Typography component="span" variant="h4" color="#eda803" gutterBottom>MINTING STAMPS</Typography>

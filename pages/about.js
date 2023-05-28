@@ -14,11 +14,8 @@ function About() {
           <Box sx={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0 }} />
           <Grid container>
             <Grid item md={12}>
-              <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid item sm={6} sx={{ flexGrow: 1 }}></Grid>
-                <Grid item md={6} sx={{ flexGrow: 1 }}>
-                  <Drawer />
-                </Grid>
+              <Grid container direction="row" justifyContent="flex-end" alignItems="flex-end" sx={{ p: 2 }}>
+                <Drawer />
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
                 <Typography sx={{ fontWeight: 500 }} variant="h5" paragraph color="#c4cad6">
