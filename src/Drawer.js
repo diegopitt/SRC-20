@@ -27,8 +27,8 @@ export default function TemporaryDrawer() {
     <Box sx={{ backgroundColor: '#132028', height: '100%', width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }} role="presentation" onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'transparent' }} component="nav" aria-labelledby="nested-list-subheader"
         subheader={
-          <ListSubheader sx={{ color:'#eda803',bgcolor: 'transparent', fontWeight:600, fontSize:22, py:2, textAlign: 'center' }} component="div" id="nested-list-subheader">
-            SRC-20 STAMPS
+          <ListSubheader sx={{ color:'#eda803',bgcolor: 'transparent', fontWeight:600, fontSize:20, py:2, textAlign: 'center' }} component="div" id="nested-list-subheader">
+            BITCOIN STAMPS
           </ListSubheader>
         }>
         <Divider variant="middle" />

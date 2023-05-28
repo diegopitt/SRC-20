@@ -22,7 +22,7 @@ function StampPage(props) {
       <Paper square elevation={3} sx={{ backgroundColor: '#132028', mb: 4 }}>
         <Grid container direction="row" justifyContent="center" alignItems="center">
           <Grid container item xs={6} sx={{ flexGrow: 1 }}>
-            <Typography sx={{ color: '#eda803', fontWeight: 600, fontSize: 22, py: 2, ml:2 }} component="span">SRC-20</Typography>
+            <Typography sx={{ color: '#eda803', fontWeight: 600, fontSize: 22, py: 2, ml:2 }} component="span">BITCOIN STAMPS</Typography>
           </Grid>
           <Grid container item xs={6} sx={{ flexGrow: 1 }} direction="row" justifyContent="flex-end" alignItems="flex-end">
             <IconButton onClick={() => { router.push("/") }}><ReplyTwoToneIcon sx={{ color: "#828fa2", fontSize: 33, mx: 2, my: 1 }} /></IconButton>
