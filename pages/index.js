@@ -47,7 +47,7 @@ function Main(props) {
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
                 <Typography component="div" variant="h4" color="#eda803" noWrap gutterBottom>BITCOIN STAMPS</Typography>
                 <Typography sx={{ fontWeight: 500, mt: 2 }} variant="h5" paragraph color="#c4cad6">Unprunable UTXO Art, Because Sats Dont Exists</Typography>
-                <Typography variant="subtitle1" color="#eda803">Introducing <b><u>SRC-20</u></b> Token Specs!</Typography>
+                <Typography variant="subtitle1" color="#eda803">Introducing <b><u>SRC-20 Token Specs!</u></b></Typography>
               </Box>
             </Grid>
           </Grid>
