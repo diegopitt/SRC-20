@@ -15,13 +15,13 @@ function Minting() {
       <Grid item xs={12} md={8} sx={{ '& .markdown': { py: 3 } }}>
         <Paper sx={{ position: 'relative', mb: 4 }}>
           <Box sx={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0 }} />
-          <Grid container>
-            <Grid item md={12}>
+          <Grid container sx={{ flexGrow: 1 }}>
+            <Grid item xs={12}>
               <Grid container direction="row" justifyContent="flex-end" alignItems="flex-end" sx={{ p: 2 }}>
                 <Drawer />
               </Grid>
               <Box sx={{ position: 'relative', p: { xs: 3, md: 6 }, pr: { md: 0 } }}>
-                <Typography component="span" variant="h4" color="#eda803" gutterBottom>MINTING STAMPS</Typography>
+              <Typography component="span" variant="h4" color="#eda803" gutterBottom>MINTING STAMPS</Typography>
                 <Typography sx={{ fontWeight: 500, mt: 2 }} variant="h5" paragraph color="#c4cad6">Unprunable UTXO Art, Because Sats Dont Exists</Typography>
               </Box>
             </Grid>
